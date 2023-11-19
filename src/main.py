@@ -2,5 +2,21 @@
 
 from var.cmd_argv.var import CmdArgv
 
+CmdArgv({
+    '__init__': [
 
-CmdArgv()
+    ],
+    'new': {
+        'workspace': [
+
+        ],
+        'project': [
+
+        ],
+    },
+    'remote': {
+        'workspace': [
+
+        ]
+    },
+})

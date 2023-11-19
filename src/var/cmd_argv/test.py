@@ -4,8 +4,6 @@ from var import CommandLineParser
 import unittest
 import os
 
-
-
 class TestCommandLineParser(unittest.TestCase):
     """
         @description: 

@@ -21,7 +21,7 @@ Autrement pour indiquer un workspace qui existe deja voici la commande.
 
 Un ordinateur ne peut avoir en cour d'execution qu'un seul workspace pour savoir lequel est en cours d'execution faire 
 
->>> gpm remote newworkspace
+>>> gpm remote workspace
 
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[END]>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [CREATE NEW MODULE] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

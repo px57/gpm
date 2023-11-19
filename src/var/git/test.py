@@ -15,7 +15,5 @@ class TestGitManager(unittest.TestCase):
             @description: 
         """
         print (repository_list)
-        
-
 
 unittest.main()

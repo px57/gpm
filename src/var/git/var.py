@@ -32,7 +32,7 @@ class GitRepository(object):
         if not self.repository_exists(path):
             raise Exception('Repository dont exists in ' + path)
 
-    def get_change(self, **kwards):
+    def get_change(self, **kwargs):
         """
             @description: 
         """

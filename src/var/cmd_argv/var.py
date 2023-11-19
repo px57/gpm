@@ -165,7 +165,7 @@ class CmdArgv(object):
 
         if type(level_namespacelist) is dict:
             if '__init__' not in level_namespacelist:
-                raise Exception(err['DONT_EXIST'])
+                raise Exception("__init__ dont exist in this namespace.")
             return level_namespacelist['__init__']
         return level_namespacelist
 
