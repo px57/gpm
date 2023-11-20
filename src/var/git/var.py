@@ -25,6 +25,19 @@ class GitRepository(object):
         self.repo = git.Repo(self.path)
         self.init_if_notexits = kwargs.get('init_if_notexits', False) 
 
+    @property
+    def branch(self):
+        """
+            @description: 
+        """
+        raw_branch = self.repo.git.branch()
+        spl_branch = raw_branch.split('\n')
+        spl_branch = [branch.replace('*', '').strip() for branch in spl_branch]
+        return {
+            'current': spl_branch[0],
+            'name': spl_branch[1]
+        }
+
     def repository_exists(self, path: str) -> bool:
         """
             @description: 

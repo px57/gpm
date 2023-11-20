@@ -24,4 +24,11 @@ class TestGitManager(unittest.TestCase):
         for repository in repository_list:
             repository.get_files_change()
 
+    def test_getbranch(self):
+        """
+            @description: 
+        """
+        for repository in repository_list:
+            print (repository.branch)
+
 unittest.main()
