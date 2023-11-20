@@ -29,6 +29,12 @@ class TestGitManager(unittest.TestCase):
             @description: 
         """
         for repository in repository_list:
-            print (repository.branch)
+            repository.branch
 
+    def test_allbranch(self):
+        """
+            @description: 
+        """
+        for repository in repository_list:
+            repository.all_branch
 unittest.main()
