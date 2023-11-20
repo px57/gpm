@@ -10,10 +10,18 @@ class TestGitManager(unittest.TestCase):
         @description: 
     """
 
-    def test_getchangelist(self):
+    def test_commit_list(self):
         """
             @description: 
         """
-        print (repository_list)
+        for repository in repository_list:
+            repository.commit_list()
+
+    def test_change_list(self):
+        """
+            @description: 
+        """
+        for repository in repository_list:
+            repository.get_files_change()
 
 unittest.main()
