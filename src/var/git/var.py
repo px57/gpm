@@ -37,6 +37,31 @@ class GitRepository(object):
             'current': spl_branch[0],
             'name': spl_branch[1]
         }
+    
+    @property
+    def branch_list(self):
+        """
+            @description: git branch -a 
+        """
+        branches = self.repo.git.branch('-a').split('\n')
+        return branches
+
+    def create_branch(self, branch_name: str):
+        """
+            @description: 
+        """
+        self.repo.git.branch(branch_name)
+
+    def checkout_branch(self, branch_name: str):
+        """
+            @description:
+        """
+
+    def branch_exists(self, branch_name: str):
+        """
+            @description: 
+        """
+        return True
 
     def repository_exists(self, path: str) -> bool:
         """

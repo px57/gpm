@@ -31,10 +31,19 @@ class TestGitManager(unittest.TestCase):
         for repository in repository_list:
             repository.branch
 
-    def test_allbranch(self):
+    def test_branch_list(self):
         """
             @description: 
         """
         for repository in repository_list:
-            repository.all_branch
+            repository.branch_list
+
+    def test_create_branch(self):
+        """
+            @description: 
+        """
+        for repository in repository_list:
+            repository.create_branch('created_by_test')
+
+
 unittest.main()
