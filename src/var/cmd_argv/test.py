@@ -16,14 +16,21 @@ class TestCommandLineParser(unittest.TestCase):
         cmdline = CommandLineParser([
             'var.py', 
             'namespace', 
+            'namespace2',
             '-p', 
             './aouaoeu', 
             '--salope', 
             'lol', 
             '--connasse="aoeuaeou"'
         ])
-        self.assertEqual(cmdline.spacename, ['namespace'])
-        print (cmdline.arguments)
+        self.assertEqual(cmdline.spacename, ['namespace', 'namespace2'])
+        self.assertEqual(cmdline.arguments, [
+            {'key': 'p', 'args': ['./aouaoeu']}, 
+            {'key': 'salope', 'args': ['lol']}, 
+            {'key': 'connasse', 'args': ['aoeuaeou']}
+        ])
+        # print (cmdline.spacename)
+        # print (cmdline.arguments)
 
 
 def run_cmd(argv: str):
