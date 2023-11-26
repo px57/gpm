@@ -48,11 +48,11 @@ class CommandLineParser(object):
 
         new_argument = {}
         for argument in argv:
-            print (argument)
             if self.is_letter_argument(argument):
                 self.__append_newargs(new_argument, arguments)
                 new_argument = {
                     'key': argument[1:],
+                    'args': []
                 }
                 continue
             elif self.is_word_cmdargument(argument):
@@ -60,9 +60,10 @@ class CommandLineParser(object):
                 new_argument = self.parse_wordargument(argument)
                 continue
 
-            # ---- [ADD ARGS]
-            print (new_argument)
-        print (arguments)
+            new_argument['args'].append(argument)
+
+        self.__append_newargs(new_argument, arguments)
+        return arguments
 
     def __append_newargs(
         self, 
@@ -77,6 +78,7 @@ class CommandLineParser(object):
         if new_argument == {}:
             return 
         arguments.append(new_argument)
+        arguments = {}
 
 
     def is_letter_argument(self, argument: str) -> bool:
