@@ -1,12 +1,13 @@
 
 
-from var import CommandLineParser
+from libs import create_command_bridge 
+from var import CommandLineParser, CmdArgv
 import unittest
 import os
 
 class TestCommandLineParser(unittest.TestCase):
     """
-        @description: 
+        @description: Test the CommandLineParser class
     """
 
     def test_spacename_unique(self):
@@ -25,14 +26,11 @@ class TestCommandLineParser(unittest.TestCase):
         ])
         self.assertEqual(cmdline.spacename, ['namespace', 'namespace2'])
         self.assertEqual(cmdline.arguments, [
-            {'key': 'p', 'args': ['./aouaoeu']}, 
-            {'key': 'salope', 'args': ['lol']}, 
+            {'key': 'p', 'args': ['./aouaoeu']},
+            {'key': 'salope', 'args': ['lol']},
             {'key': 'connasse', 'args': ['aoeuaeou']}
         ])
-        # print (cmdline.spacename)
-        # print (cmdline.arguments)
-
-
+        
 def run_cmd(argv: str):
     """
         @description: 
@@ -42,8 +40,7 @@ def run_cmd(argv: str):
     
 class TestCommandLine(unittest.TestCase):
     """
-        @description: 
-
+        @description: Test the CommandLine class
     """ 
 
     def test_withnamespace_only(self):
@@ -57,5 +54,17 @@ class TestCommandLine(unittest.TestCase):
             @description: 
         """
         run_cmd('namespace -p ./aouaoeu')
+
+class TestCreateCommandBridge(unittest.TestCase):
+    """
+        @description:
+    """
+
+    def test_create_command_bridge(self):
+        """
+            @description: 
+        """
+        create_command_bridge('veryfakecommandline', 'src/var/cmd/var.py')
+        
 
 unittest.main()

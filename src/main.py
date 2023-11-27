@@ -1,6 +1,6 @@
 
 
-from var.cmd_argv.var import CmdArgv
+from var.cmd.var import CmdArgv
 
 CmdArgv({
     '__init__': [

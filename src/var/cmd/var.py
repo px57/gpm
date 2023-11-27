@@ -138,7 +138,6 @@ class CmdArgv(object):
         """
         self.__namespacelist = namespaceList
         self.__argv = CommandLineParser(sys.argv)
-        self.__parsedcommandline = self.__parse_commandline()
         self.__selected_spacename = self.get_method_to_spacename(
             self.__argv, 
             self.__namespacelist
@@ -175,16 +174,17 @@ class CmdArgv(object):
         """
             @description: 
         """
-
-    def __parse_commandline(self):
-        """
-            @description: 
-        """
     
     def get_spacename(self, args):
         """
             @description: 
         """
+
+    def execute(self):
+        """
+            @description: 
+        """
+        print ('--------------- [execute] ---------------')
 
 
 # -------------------------- [UNITEST]
@@ -214,4 +214,4 @@ if __name__ == '__main__':
                 }
             ]
         }
-    })
+    }).execute()
