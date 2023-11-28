@@ -16,12 +16,8 @@ La conception de tout projet dépend souvent de librairies et de modules qui son
 Pour installer `gpm`, exécutez la commande suivante:
 
 ```
-$ pip install gpm
+pip install gpm
 ```
-
-### \[INSTALLATION]
-
-Pour installer gpm faire la commande suivante.
 
 Apres l'installation du module il faut initialiser ou importer, un environnement de travail.
 
