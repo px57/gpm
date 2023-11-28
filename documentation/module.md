@@ -1,17 +1,17 @@
 # module
 
-## \[VOCABULAIRE]
+##
 
+### \[VOCABULAIRE]
 
-
-## \[INTRODUCTION]
+### \[INTRODUCTION]
 
 La conception de tout projet dépend souvent de librairies et de modules qui sont potentiellement réutilisables. `gpm` (Git plug module) permet leur gestion dans les cas de figures suivants:
 
 * Administration de la base de données de code.
 * Le numéro de version est directement récupéré du MD5 généré par Git de la base de code en cours.
 
-## \[INSTALLATION]
+### \[INSTALLATION]
 
 Pour installer `gpm`, exécutez la commande suivante:
 
@@ -19,7 +19,7 @@ Pour installer `gpm`, exécutez la commande suivante:
 $ pip install gpm
 ```
 
-## \[INSTALLATION]
+### \[INSTALLATION]
 
 Pour installer gpm faire la commande suivante.
 
@@ -54,26 +54,23 @@ Explication de la commande. @input.name -> Le nom que va prendre le module.\
 
 \-------- \[CODE-PROCESS] x. Verifier s'il existe un module dans le dossier actuelle. x. \*IF S'il n'existe pas de module alors ont n'ent creer une x. \*ELSE Ont indique a l'utilisateurs que le module n'existe pas -------- \[END]
 
+<<<<<<< HEAD $&#x20;
 
-<<<<<<< HEAD
-    $ {
-        'module__name': "chatroom",
-        'version__md5': "aoeuaoetunsaousaoeuhaoeu",
-        "version__module": "1.22.234 (main)",
-    }
+```json
+{ 
+    'module__name': "chatroom", 
+    'version__md5': "aoeuaoetunsaousaoeuhaoeu", 
+    "version__module": "1.22.234 (main)", 
+}
+```
 
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[END]>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [MANAGER] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-Qu'elle est le but de GPM ? 
-Avant d'interagir avec le 
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[END]>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-=======
+### \[MANAGER]
 
-## \[CREATE\_NEW\_MODULE]
+## &#x20;Qu'elle est le but de GPM ? Avant d'interagir avec le&#x20;
 
+### \[CREATE\_NEW\_MODULE]
 
-
-## \[CREATE\_JSON\_FILE]
+### \[CREATE\_JSON\_FILE]
 
 ```json
 $ {
@@ -83,7 +80,8 @@ $ {
 }
 ```
 
-&#x20;<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< \[MANAGER] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>&#x20;
 
-Qu'elle est le but de GPM ? Avant d'interagir avec le <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\[END]>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
->>>>>>> 1a26c07f50d307b7468e25822a51d67529c089be
+
+### \[CREATE\_NEW\_MODULE]
+
+Qu'elle est le but de GPM ? Avant d'interagir avec le&#x20;
