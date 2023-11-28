@@ -39,16 +39,20 @@ $ gpm remote newworkspace ./sethere
 
 Un ordinateur ne peut avoir en cour d'execution qu'un seul workspace pour savoir lequel est en cours d'execution faire
 
+```console
+    gpm remote workspace
 ```
-$ gpm remote workspace
-```
+
+### \[PROCESS]
+
+x. La premiere etape consiste en la creation d'un espace de travail au sein duquel l'ont pourra 
 
 ### \[CREATE\_NEW\_MODULE]
 
 Pour creer une nouveaux module il faut taper la commande suivante.
 
-```
-$ gpm newmodule
+```console
+    gpm new module
 ```
 
 Explication de la commande. @input.name -> Le nom que va prendre le module.\
@@ -84,7 +88,7 @@ Avant d'interagir avec le
 La gestion&#x20;
 
 ```json
-$ {
+{
     'module__name': "chatroom",
     'version__md5': "aoeuaoetunsaousaoeuhaoeu",
     "version__module": "1.22.234 (main)",
