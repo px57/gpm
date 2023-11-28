@@ -24,31 +24,31 @@ Pour installer gpm faire la commande suivante.
 Apres l'installation du module il faut initialiser ou importer, un environnement de travail.
 
 Pour creer un nouvelle workspace !
->>> gpm newworkspace ./sethere
+    $ gpm newworkspace ./sethere
 
 Autrement pour indiquer un workspace qui existe deja voici la commande.
 
->>> gpm remote newworkspace ./sethere 
+    $ gpm remote newworkspace ./sethere 
 
 Un ordinateur ne peut avoir en cour d'execution qu'un seul workspace pour savoir lequel est en cours d'execution faire 
 
->>> gpm remote workspace
+    $ gpm remote workspace
 
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[END]>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [CREATE NEW MODULE] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[END]
+[CREATE_NEW_MODULE] 
 Pour creer une nouveaux module il faut taper la commande suivante.
 
->>> gpm newmodule
-    @input.name -> Le nom que va prendre le module.   
-    @input.gitadress -> L'adress que doit prendre ce module.
-    @input.project -> Demande a qu'elle projet est-ce que je suis lier.
+    $ gpm newmodule
+        @input.name -> Le nom que va prendre le module.   
+        @input.gitadress -> L'adress que doit prendre ce module.
+        @input.project -> Demande a qu'elle projet est-ce que je suis lier.
 
 -------- [CODE-PROCESS]
 x. Verifier s'il existe un module dans le dossier actuelle.
     x. *IF S'il n'existe pas de module alors ont n'ent creer une 
     x. *ELSE Ont indique a l'utilisateurs que le module n'existe pas 
 -------- [END]
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[END]>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [CREATE NEW MODULE] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [END] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [CREATE JSON FILE] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
