@@ -62,7 +62,7 @@ Explication de la commande. @input.name -> Le nom que va prendre le module.\
         "version__module": "1.22.234 (main)",
     }
 
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[END]>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+## \[CREATE\_NEW\_MODULE]
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [MANAGER] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Qu'elle est le but de GPM ? 
 Avant d'interagir avec le 
