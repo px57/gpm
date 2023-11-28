@@ -24,6 +24,7 @@ Pour installer gpm faire la commande suivante.
 Apres l'installation du module il faut initialiser ou importer, un environnement de travail.
 
 Pour creer un nouvelle workspace !
+
     $ gpm newworkspace ./sethere
 
 Autrement pour indiquer un workspace qui existe deja voici la commande.
@@ -39,6 +40,8 @@ Un ordinateur ne peut avoir en cour d'execution qu'un seul workspace pour savoir
 Pour creer une nouveaux module il faut taper la commande suivante.
 
     $ gpm newmodule
+
+Explication de la commande.
         @input.name -> Le nom que va prendre le module.   
         @input.gitadress -> L'adress que doit prendre ce module.
         @input.project -> Demande a qu'elle projet est-ce que je suis lier.
@@ -52,11 +55,13 @@ x. Verifier s'il existe un module dans le dossier actuelle.
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [CREATE NEW MODULE] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [END] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [CREATE JSON FILE] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-{
-    'module__name': "chatroom",
-    'version__md5': "aoeuaoetunsaousaoeuhaoeu",
-    "version__module": "1.22.234 (main)",
-}
+
+    $ {
+        'module__name': "chatroom",
+        'version__md5': "aoeuaoetunsaousaoeuhaoeu",
+        "version__module": "1.22.234 (main)",
+    }
+    
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[END]>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [MANAGER] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Qu'elle est le but de GPM ? 
