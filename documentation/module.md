@@ -4,6 +4,10 @@
 
 ### \[VOCABULAIRE]
 
+
+
+
+
 ### \[INTRODUCTION]
 
 La conception de tout projet dépend souvent de librairies et de modules qui sont potentiellement réutilisables. `gpm` (Git plug module) permet leur gestion dans les cas de figures suivants:
@@ -39,7 +43,9 @@ Un ordinateur ne peut avoir en cour d'execution qu'un seul workspace pour savoir
 $ gpm remote workspace
 ```
 
-\[END] \[CREATE\_NEW\_MODULE] Pour creer une nouveaux module il faut taper la commande suivante.
+### \[CREATE\_NEW\_MODULE]
+
+Pour creer une nouveaux module il faut taper la commande suivante.
 
 ```
 $ gpm newmodule
@@ -48,7 +54,7 @@ $ gpm newmodule
 Explication de la commande. @input.name -> Le nom que va prendre le module.\
 @input.gitadress -> L'adress que doit prendre ce module. @input.project -> Demande a qu'elle projet est-ce que je suis lier.
 
-\-------- \[CODE-PROCESS] x. Verifier s'il existe un module dans le dossier actuelle. x. \*IF S'il n'existe pas de module alors ont n'ent creer une x. \*ELSE Ont indique a l'utilisateurs que le module n'existe pas -------- \[END]
+\-------- \[CODE-PROCESS] x. Verifier s'il existe un module dans le dossier actuelle. x. \*IF S'il n'existe pas de module alors ont n'ent creer une x. \*ELSE Ont indique a l'utilisateurs que le module n'existe pas&#x20;
 
 ```json
 { 
@@ -71,9 +77,11 @@ Avant d'interagir avec le
 ## &#x20;Qu'elle est le but de GPM ? Avant d'interagir avec le&#x20;
 >>>>>>> b204f20b584b49b0c58e04f118d78f6d6c3083ac
 
-### \[CREATE\_NEW\_MODULE]
-
 ### \[CREATE\_JSON\_FILE]
+
+
+
+La gestion&#x20;
 
 ```json
 $ {
