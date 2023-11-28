@@ -50,13 +50,11 @@ Explication de la commande. @input.name -> Le nom que va prendre le module.\
 
 \-------- \[CODE-PROCESS] x. Verifier s'il existe un module dans le dossier actuelle. x. \*IF S'il n'existe pas de module alors ont n'ent creer une x. \*ELSE Ont indique a l'utilisateurs que le module n'existe pas -------- \[END]
 
-<<<<<<< HEAD $&#x20;
-
 ```json
 { 
     'module__name': "chatroom", 
     'version__md5': "aoeuaoetunsaousaoeuhaoeu", 
-    "version__module": "1.22.234 (main)", 
+    "version__module": "1.22.234 (main)",
 }
 ```
 
