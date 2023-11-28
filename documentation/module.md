@@ -1,13 +1,24 @@
+# [VOCABULAIRE]
 
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [VOCABULAIRE] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [END] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [INTRODUCTION] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-La conception de tout projet depend souvent de librairie, et de module qui sont potentiellement reutillisable 
-gpm(Git plug module) permet leur gestion dans les cas de figures suivant: 
-x. Administration de la base de donne de code.
-x. Le numero de version est directement recuperer du md5 generer par git de la base de code en cours.
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[END]>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [INSTALLATION] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[END]
+
+# [INTRODUCTION]
+
+La conception de tout projet dépend souvent de librairies et de modules qui sont potentiellement réutilisables. `gpm` (Git plug module) permet leur gestion dans les cas de figures suivants:
+- Administration de la base de données de code.
+- Le numéro de version est directement récupéré du MD5 généré par Git de la base de code en cours.
+
+[END]
+
+# [INSTALLATION]
+
+Pour installer `gpm`, exécutez la commande suivante:
+    
+    $ pip install gpm
+
+[END]
+# [INSTALLATION]
+
 Pour installer gpm faire la commande suivante.
 
 Apres l'installation du module il faut initialiser ou importer, un environnement de travail.
