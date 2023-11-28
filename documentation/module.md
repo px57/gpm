@@ -4,7 +4,9 @@
 
 # [INTRODUCTION]
 
-La conception de tout projet dépend souvent de librairies et de modules qui sont potentiellement réutilisables. `gpm` (Git plug module) permet leur gestion dans les cas de figures suivants:
+La conception de tout projet dépend souvent de librairies et de modules qui sont potentiellement réutilisables. 
+`gpm` (Git plug module) permet leur gestion dans les cas de figures suivants:
+
 - Administration de la base de données de code.
 - Le numéro de version est directement récupéré du MD5 généré par Git de la base de code en cours.
 
@@ -61,7 +63,7 @@ x. Verifier s'il existe un module dans le dossier actuelle.
         'version__md5': "aoeuaoetunsaousaoeuhaoeu",
         "version__module": "1.22.234 (main)",
     }
-    
+
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[END]>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [MANAGER] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Qu'elle est le but de GPM ? 
