@@ -74,7 +74,7 @@ Explication de la commande. @input.name -> Le nom que va prendre le module.\
 
 ## \[MANAGER]&#x20;
 
-## &#x20;Qu'elle est le but de GPM ? Avant d'interagir avec le <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\[END]>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+## &#x20;Qu'elle est le but de GPM ? Avant d'interagir avec le \[END]
 
 \=======
 
