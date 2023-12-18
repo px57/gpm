@@ -1,5 +1,4 @@
 
-
 from libs import create_command_bridge 
 from var import CommandLineParser, CmdArgv
 import unittest

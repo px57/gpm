@@ -8,11 +8,14 @@ CmdArgv({
     ],
     'new': {
         'workspace': [
-
+            
         ],
         'project': [
 
         ],
+        'laboratory': [
+            
+        ]
     },
     'remote': {
         'workspace': [

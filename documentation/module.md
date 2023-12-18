@@ -4,9 +4,26 @@
 
 ### \[VOCABULAIRE]
 
+- Laboratory: Un laboratory est un git qui contient des modules sous forme de submodules git.
+    L'objectif d'un laboratory est de pouvoir gerer les modules de facon centraliser.
+    Les types d'action que l'on peut faire sur un laboratory sont les suivants:
+    - Creer un module
+    - Supprimer un module
+    - Mettre a jour un module avec le code recuperer sur un Project.
+    - Suivre le niveaux d'evolution des modules installer sur un ensemble de project.
+ 
+- Module: Un module est un git qui contient un code source, qui peut etre injecter dans un ou plusieurs projets.
+    L'objectif d'un module est de pouvoir etre reutiliser dans plusieurs projets.
+    Les types d'action que l'on peut faire sur un module sont les suivants:
 
-
-
+- Project: Un project est un git ainsi qu'un dossier qui contient des modules injecter sans suivie de version git.
+    Un projet est un livrable client. 
+    Les types d'action que l'on peut faire sur un project sont les suivants:
+    - Creer un project
+    - Supprimer un project
+    - Mettre a jour un project avec le code module centraliser sur le laboritory.
+    - Locker un module sur une version specifique, pour permettre une customisation du module, a destination du client.
+      Sans affecter en aucun cas le module centraliser sur le laboritory.
 
 ### \[INTRODUCTION]
 
@@ -39,13 +56,14 @@ $ gpm remote newworkspace ./sethere
 
 Un ordinateur ne peut avoir en cour d'execution qu'un seul workspace pour savoir lequel est en cours d'execution faire
 
-```console
+``` 
     gpm remote workspace
 ```
 
 ### \[PROCESS]
 
-x. La premiere etape consiste en la creation d'un espace de travail au sein duquel l'ont pourra 
+x. En premier lieux ont met en place un laboratory, qui est un git qui contiendra les modules sous le format submodules git.
+x.  
 
 ### \[CREATE\_NEW\_MODULE]
 
@@ -83,8 +101,6 @@ Avant d'interagir avec le
 
 ### \[CREATE\_JSON\_FILE]
 
-
-
 La gestion&#x20;
 
 ```json
@@ -94,8 +110,6 @@ La gestion&#x20;
     "version__module": "1.22.234 (main)",
 }
 ```
-
-
 
 ### \[CREATE\_NEW\_MODULE]
 

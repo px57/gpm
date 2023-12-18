@@ -202,7 +202,7 @@ if __name__ == '__main__':
                 'command': ['h', 'help'],
                 'args': ['path', 'description'],
                 'kwargs': [''],
-                '__def__': fonction  
+                '__def__': fonction,
             },
         ],
         'new': {
