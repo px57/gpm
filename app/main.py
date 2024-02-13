@@ -12,6 +12,7 @@ from init.commandline import commandline__init
 from status.commandline import commandline__status
 from help.commandline import commandline__help
 from commit.commandline import commandline__commit
+from editable.commandline import commandline__editable
 
 
 def main():
@@ -29,6 +30,8 @@ def main():
         return commandline__status()
     elif sys.argv[1] == "commit":
         return commandline__commit()
+    elif sys.argv[1] == "editable":
+        return commandline__editable()
     else:
         return commandline__help()
 

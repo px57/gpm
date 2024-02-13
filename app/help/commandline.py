@@ -15,6 +15,7 @@ def commandline__help():
         "status": "This command is to show the status of the gpm",
         "help": "This command is to show the help",
         "commit": "This command is to commit the changes",
+        "editable": "This command is to make the submodule editable in the git repository",
     }
 
     for key, value in help_list.items():
