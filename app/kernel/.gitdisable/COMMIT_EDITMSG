@@ -1,0 +1,18 @@
+feat: Add base.json and git/remote.py
+
+Add base.json and git/remote.py files with necessary functions and configurations.
+
+Changes:
+- Added base.json file with configuration details for the module.
+- Added git/remote.py file with functions to manage remote git repositories.
+
+# Veuillez saisir le message de validation pour vos modifications. Les lignes
+# commençant par '#' seront ignorées, et un message vide abandonne la validation.
+#
+# Sur la branche main
+# Votre branche est à jour avec 'origin/main'.
+#
+# Modifications qui seront validées :
+#	nouveau fichier : .gpm/base.json
+#	nouveau fichier : git/remote.py
+#
