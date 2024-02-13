@@ -129,3 +129,22 @@ class Config:
         value = getattr(self, key)
         show = Fore.GREEN + key + Style.RESET_ALL + ": " + str(value)
         print(show)
+
+    def is_project(self):
+        """
+        This function is to check if the project
+        """
+        if not hasattr(self, "project_type"):
+            return False
+        project_type = getattr(self, "project_type")
+        return project_type == "project"
+    
+    def is_module(self):
+        """
+        This function is to check if the module
+        """
+        if not hasattr(self, "project_type"):
+            return False
+        project_type = getattr(self, "project_type")
+        return project_type == "module"
+        
