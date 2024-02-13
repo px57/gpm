@@ -1,6 +1,7 @@
 
 import os
 from config.find import find_gpm_path
+import pprint
 import json
 
 class Config:
@@ -20,7 +21,7 @@ class Config:
         """
         This function is to get the base path
         """
-        return self.root_path + "/base.json"
+        return find_gpm_path() + "/base.json"
      
 
     def load(self):
@@ -30,9 +31,16 @@ class Config:
         if not os.path.exists(self.base_path):
             return self
 
+        base = {}
         with open(self.base_path, "r") as f:
-            self.base = f.read()
-
+            base = f.read()
+    
+        base = json.loads(base)
+        for key in base:
+            try:
+                setattr(self, key, base[key])
+            except:
+                pass
         return self
     
     def create(self):
@@ -53,9 +61,9 @@ class Config:
         setattr(self, key, value)
         return self
 
-    def json(self):
+    def dict(self):
         """
-        This function is to get the base.json file
+        This function is to get the dictionary
         """
         # get the list of the attributes
         attributes = dir(self)
@@ -68,7 +76,13 @@ class Config:
         for a in attributes:
             dictionary[a] = getattr(self, a)
         # return the dictionary
-        return json.dumps(dictionary)
+        return dictionary
+
+    def json(self):
+        """
+        This function is to get the base.json file
+        """
+        return json.dumps(self.dict(), indent=4)
 
     def save(self):
         """
@@ -76,3 +90,9 @@ class Config:
         """
         with open(self.base_path, "w+") as f:
             f.write(self.json())
+
+    def status(self):
+        """
+        This function is to show the status
+        """
+        pprint.pprint(self.dict())        

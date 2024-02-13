@@ -8,11 +8,8 @@ def commandline__init():
     """
     This function is to initialize the command line
     """
-    # project_type = choices_project_type()
-
-    project_type = {"value": "module"}
-    # print ("The project type is: {}".format(project_type["value"]))
-
+    project_type = choices_project_type()
+    
     root_path = find_directory_in_parent(".git", '.')
     gpm_path = os.path.join(root_path, ".gpm")
 

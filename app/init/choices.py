@@ -1,13 +1,11 @@
 
+from config.choices import type_choices
 
 def choices_project_type():
     """
     This function is to show the choices of the project type
     """
-    type_choices = [
-        "module", 
-        "project"
-    ]
+    global type_choices
     # -> show the choices list with number before to input the choice
     print ("Please select the type of the project")
     for i, answer_choice in enumerate(type_choices):

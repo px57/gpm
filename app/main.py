@@ -8,6 +8,7 @@ import sys
 
 sys.path.append(os.path.join(os.path.dirname(__file__), ""))
 from init.commandline import commandline__init
+from status.commandline import commandline__status
 
 def commandline__help():
     """
@@ -25,6 +26,10 @@ def main():
     
     if sys.argv[1] == "init":
         return commandline__init()
+    elif sys.argv[1] == "help":
+        return commandline__help()
+    elif sys.argv[1] == "status":
+        return commandline__status()
     else:
         return commandline__help()
 
