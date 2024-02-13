@@ -23,6 +23,7 @@ def commitcommand___commit__project():
     """
     submodule_integrate()
     commit()
+    # submodule_unintegrate()
 
 def commitcommand___commit__module():
     """
@@ -53,3 +54,19 @@ def submodule_integrate():
         print (Fore.GREEN + "Integrate-submodule: " + submodule_path + Style.RESET_ALL)
         # moove the git_path to gitdisable_path
         os.rename(git_path, gitdisable_path)
+
+def submodule_unintegrate():
+    """
+    This function is to unintegrate the submodule.
+    """
+    print (Fore.RED + ">>> Unintegrate the submodule..." + Style.RESET_ALL)
+    for submodule_path in find_submodule_path():
+        git_path = os.path.join(submodule_path, ".git")
+        gitdisable_path = os.path.join(submodule_path, ".gitdisable")
+
+        if os.path.exists(git_path):
+            continue;
+        
+        print (Fore.GREEN + "Unintegrate-submodule: " + submodule_path + Style.RESET_ALL)
+        # moove the gitdisable_path to git_path
+        os.rename(gitdisable_path, git_path)
