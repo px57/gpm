@@ -23,7 +23,7 @@ def commitcommand___commit__project():
     """
     submodule_integrate()
     commit()
-    # submodule_unintegrate()
+    submodule_unintegrate()
 
 def commitcommand___commit__module():
     """
