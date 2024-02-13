@@ -4,6 +4,11 @@ from config.find import find_gpm_path
 import pprint
 import json
 
+from colorama import Fore, Style, init
+
+# Initialiser colorama pour s'assurer qu'il fonctionne bien dans tous les terminaux
+init(autoreset=True)
+
 class Config:
     """
     Gpm Configurations
@@ -95,4 +100,6 @@ class Config:
         """
         This function is to show the status
         """
-        pprint.pprint(self.dict())        
+        for key, value in self.dict().items():
+          print(f"{Fore.BLUE}{key}: {Fore.GREEN}{value}")
+

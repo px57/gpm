@@ -1,6 +1,8 @@
 {
     "base_path": "/var/projects/gpm/.gpm/base.json",
     "gpm_path": "/var/projects/gpm/.gpm",
+    "name": "gpm",
     "project_type": "project",
+    "repository_url": "https://github.com/px57/gpm.git",
     "root_path": "/var/projects/gpm"
 }
