@@ -14,17 +14,19 @@ class Config:
     Gpm Configurations
     """
 
-    def __init__(self):
+    def __init__(self, path_now='./'):
         """
         This is the constructor
+        :param path_now: the path
         """
-        self.root_path = find_gpm_path()        
+        self.root_path = find_gpm_path() 
         self.load()
 
     @property
-    def base_path(self):
+    def base_path(self, path_now='./'):
         """
         This function is to get the base path
+        :param path_now: the path
         """
         return find_gpm_path() + "/base.json"
      
@@ -100,6 +102,30 @@ class Config:
         """
         This function is to show the status
         """
-        for key, value in self.dict().items():
-          print(f"{Fore.BLUE}{key}: {Fore.GREEN}{value}")
 
+        order = [
+            'name',
+            'project_type',
+            'repository_url',
+            'root_path',
+            'gpm_path',
+            'base_path'
+        ]
+        for key in order:
+            if not hasattr(self, key):
+                continue
+            self.status_show_key(key)
+
+        for key in self.dict().keys():
+            if key in order:
+                continue
+            self.status_show_key(key)
+
+    def status_show_key(self, key):
+        """
+        This function is to show the status of the key
+        :param key: the key
+        """
+        value = getattr(self, key)
+        show = Fore.GREEN + key + Style.RESET_ALL + ": " + str(value)
+        print(show)

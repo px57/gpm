@@ -7,15 +7,12 @@ import os
 import sys
 
 sys.path.append(os.path.join(os.path.dirname(__file__), ""))
+
 from init.commandline import commandline__init
 from status.commandline import commandline__status
+from help.commandline import commandline__help
+from commit.commandline import commandline__commit
 
-def commandline__help():
-    """
-    This function is to show the help
-    """
-    print ("This is the help")
-    print ('gpm init ')
 
 def main():
     """
@@ -30,6 +27,8 @@ def main():
         return commandline__help()
     elif sys.argv[1] == "status":
         return commandline__status()
+    elif sys.argv[1] == "commit":
+        return commandline__commit()
     else:
         return commandline__help()
 
