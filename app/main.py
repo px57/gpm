@@ -14,6 +14,7 @@ from help.commandline import commandline__help
 from commit.commandline import commandline__commit
 from editable.commandline import commandline__editable
 
+from commit.commandline import submodule_integrate 
 
 def main():
     """
@@ -29,7 +30,10 @@ def main():
     elif sys.argv[1] == "status":
         return commandline__status()
     elif sys.argv[1] == "commit":
-        return commandline__commit()
+        if len(sys.argv) == 2:
+            return commandline__commit()
+        elif sys.argv[2] == "manual":
+            return submodule_integrate()
     elif sys.argv[1] == "editable":
         return commandline__editable()
     else:
