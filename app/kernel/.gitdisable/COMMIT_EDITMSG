@@ -1,10 +1,10 @@
-feat: Add base.json and git/remote.py
+feat: Add pull and push functionality to git
 
-Add base.json and git/remote.py files with necessary functions and configurations.
+Add pull.py and push.py files to the git directory to implement pull and push functionality in the git system.
 
 Changes:
-- Added base.json file with configuration details for the module.
-- Added git/remote.py file with functions to manage remote git repositories.
+- Added pull.py file for implementing pull functionality
+- Added push.py file for implementing push functionality
 
 # Veuillez saisir le message de validation pour vos modifications. Les lignes
 # commençant par '#' seront ignorées, et un message vide abandonne la validation.
@@ -13,6 +13,6 @@ Changes:
 # Votre branche est à jour avec 'origin/main'.
 #
 # Modifications qui seront validées :
-#	nouveau fichier : .gpm/base.json
-#	nouveau fichier : git/remote.py
+#	nouveau fichier : git/pull.py
+#	nouveau fichier : git/push.py
 #
