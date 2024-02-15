@@ -49,9 +49,9 @@ def commit():
 
 def submodule_integrate():
     """
-    This function is to integrate the submodule.
+    This function is to connect-submodule.
     """
-    print (Fore.RED + ">>> Integrate the submodule..." + Style.RESET_ALL)
+    print (Fore.RED + ">>> connect-submodule..." + Style.RESET_ALL)
     for submodule_path in find_submodule_path():
         git_path = os.path.join(submodule_path, ".git")
         gitdisable_path = os.path.join(submodule_path, ".gitdisable")
@@ -59,15 +59,15 @@ def submodule_integrate():
         if not os.path.exists(git_path):
             continue;
         
-        print (Fore.GREEN + "Integrate-submodule: " + submodule_path + Style.RESET_ALL)
+        print (Fore.GREEN + "connect-submodule: " + submodule_path + Style.RESET_ALL)
         # moove the git_path to gitdisable_path
         os.rename(git_path, gitdisable_path)
 
 def submodule_unintegrate():
     """
-    This function is to unintegrate the submodule.
+    This function is to disconnect-submodule.
     """
-    print (Fore.RED + ">>> Unintegrate the submodule..." + Style.RESET_ALL)
+    print (Fore.RED + ">>> disconnect-submodule..." + Style.RESET_ALL)
     for submodule_path in find_submodule_path():
         git_path = os.path.join(submodule_path, ".git")
         gitdisable_path = os.path.join(submodule_path, ".gitdisable")
@@ -75,7 +75,7 @@ def submodule_unintegrate():
         if os.path.exists(git_path):
             continue;
         
-        print (Fore.GREEN + "Unintegrate-submodule: " + submodule_path + Style.RESET_ALL)
+        print (Fore.GREEN + "disconnect-submodule: " + submodule_path + Style.RESET_ALL)
         # moove the gitdisable_path to git_path
         os.rename(gitdisable_path, git_path)
 
