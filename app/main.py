@@ -37,6 +37,12 @@ def main():
             return commandline__commit__all()
     elif sys.argv[1] == "editable":
         return commandline__editable()
+    elif sys.argv[1] == "push":
+        return os.system("git push")
+    elif sys.argv[1] == "pull":
+        return os.system("git pull")
+    elif sys.argv[1] == "django-admin":
+        return os.system("django-admin " + " ".join(sys.argv[2:]))
     else:
         return commandline__help()
 
