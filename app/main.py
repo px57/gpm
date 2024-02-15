@@ -12,6 +12,7 @@ from init.commandline import commandline__init
 from status.commandline import commandline__status
 from help.commandline import commandline__help
 from commit.commandline import commandline__commit
+from commit.commandline import commandline__commit__all
 from editable.commandline import commandline__editable
 
 from commit.commandline import submodule_integrate 
@@ -32,8 +33,8 @@ def main():
     elif sys.argv[1] == "commit":
         if len(sys.argv) == 2:
             return commandline__commit()
-        elif sys.argv[2] == "manual":
-            return submodule_integrate()
+        elif sys.argv[2] == "all":
+            return commandline__commit__all()
     elif sys.argv[1] == "editable":
         return commandline__editable()
     else:

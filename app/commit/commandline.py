@@ -37,7 +37,15 @@ def commit():
     """
     print (Fore.RED + ">>> Commit the changes..." + Style.RESET_ALL)
     os.system('git add -A')
-    os.system('commitgpt --suggestions 7 --max-tokens 100 ""')
+    a = os.system('commitgpt --suggestions 7 --max-tokens 100 ""')
+    print ('commitgpt >> ' + str(a))
+    if a == 256:
+        print (Fore.RED + ">>> Commit failed." + Style.RESET_ALL)
+        commit_message = input("Enter the commit message: ")
+        os.system('git commit -m "' + commit_message + '"')
+    else:
+        print (Fore.GREEN + ">>> Commit done." + Style.RESET_ALL)
+
 
 def submodule_integrate():
     """
@@ -70,3 +78,23 @@ def submodule_unintegrate():
         print (Fore.GREEN + "Unintegrate-submodule: " + submodule_path + Style.RESET_ALL)
         # moove the gitdisable_path to git_path
         os.rename(gitdisable_path, git_path)
+
+def commandline__commit__all():
+    """
+    This function is to commit all submodules.
+    """
+    print ('save the chdir >> ' + os.getcwd())
+    print ('get all submodules')
+    submodules = find_submodule_path()
+    print ('submodules >> ' + str(submodules))
+    # for submodule in submodules:
+    #     print ('submodule >> ' + submodule)
+    #     os.chdir(submodule)
+    #     commit()
+
+    print ('restore the chdir >> ' + os.getcwd())
+    # os.chdir(os.path.join(os.getcwd(), ".."))
+    print ('commit')
+
+
+    
