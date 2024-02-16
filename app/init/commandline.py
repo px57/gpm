@@ -21,10 +21,17 @@ def commandline__init():
     """
     This function is to initialize the command line
     """
-    project_type = choices_project_type()
-
     root_path = find_directory_in_parent(".git", '.')
     gpm_path = os.path.join(root_path, ".gpm")
+
+    if os.path.exists(gpm_path):
+        print ("The project is already initialized, you want to reinitialize it? (y/n)")
+        answer = input()
+        if answer != "y":
+            return
+        
+
+    project_type = choices_project_type()
 
     if not os.path.exists(gpm_path):
         os.makedirs(gpm_path)
