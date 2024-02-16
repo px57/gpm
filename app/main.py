@@ -14,6 +14,7 @@ from help.commandline import commandline__help
 from commit.commandline import commandline__commit
 from commit.commandline import commandline__commit__all
 from editable.commandline import commandline__editable
+from attach.commandline import commandline__attach
 
 from commit.commandline import submodule_integrate 
 
@@ -41,6 +42,8 @@ def main():
         return os.system("git push")
     elif sys.argv[1] == "pull":
         return os.system("git pull")
+    elif sys.argv[1] == "attach":
+        return commandline__attach()
     elif sys.argv[1] == "django-admin":
         return os.system("django-admin " + " ".join(sys.argv[2:]))
     else:

@@ -1,18 +1,25 @@
-feat: Add pull and push functionality to git
+chore: add docker attach functionality and docker container id
 
-Add pull.py and push.py files to the git directory to implement pull and push functionality in the git system.
+Why:
+
+- To add functionality for attaching to a Docker container
+- To add a method for retrieving the Docker container id
 
 Changes:
-- Added pull.py file for implementing pull functionality
-- Added push.py file for implementing push functionality
+
+- Added `docker/attach.py` to handle attaching to a container
+- Import `os` and `get_container_id` function from `docker/id.py` in `docker/attach.py`
+- Implemented `docker_attach` function in `docker/attach.py` for attaching to a container
 
 # Veuillez saisir le message de validation pour vos modifications. Les lignes
 # commençant par '#' seront ignorées, et un message vide abandonne la validation.
 #
 # Sur la branche main
-# Votre branche est à jour avec 'origin/main'.
+# Votre branche est en avance sur 'origin/main' de 4 commits.
+#   (utilisez "git push" pour publier vos commits locaux)
 #
 # Modifications qui seront validées :
-#	nouveau fichier : git/pull.py
-#	nouveau fichier : git/push.py
+#	nouveau fichier : docker/attach.py
+#	nouveau fichier : docker/id.py
+#	modifié :         docker/ps.py
 #

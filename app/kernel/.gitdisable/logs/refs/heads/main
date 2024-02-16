@@ -3,3 +3,7 @@
 5f93ec91f76c39a881b262aa17595ba3a9f70662 6f042dd1af1ed6fc2f65fe59eb65d35eb3e7d95d projeta618 <projeta618@gmail.com> 1707833536 -0300	commit: feat: Add base.json and git/remote.py
 6f042dd1af1ed6fc2f65fe59eb65d35eb3e7d95d 5261d4cebda6cd01f5475a614b026b00b4dd2767 projeta618 <projeta618@gmail.com> 1707925072 -0300	pull origin main: Fast-forward
 5261d4cebda6cd01f5475a614b026b00b4dd2767 6fd9f874ff5a286b13aec6e05653be9eb1117e6e projeta618 <projeta618@gmail.com> 1707957600 -0300	commit: feat: Add pull and push functionality to git
+6fd9f874ff5a286b13aec6e05653be9eb1117e6e bd7f229c201e793847069035fb4d8d53303a7379 projeta618 <projeta618@gmail.com> 1708119047 -0300	commit: add git push
+bd7f229c201e793847069035fb4d8d53303a7379 75c34f2b853943a74b3b8c1e02fa91bc157b7d76 projeta618 <projeta618@gmail.com> 1708119053 -0300	pull origin main: Merge made by the 'ort' strategy.
+75c34f2b853943a74b3b8c1e02fa91bc157b7d76 41c1a601e49c2cb9cf8cc99c68bf6c97f118dccc projeta618 <projeta618@gmail.com> 1708119127 -0300	pull: Merge made by the 'ort' strategy.
+41c1a601e49c2cb9cf8cc99c68bf6c97f118dccc a152cbac369339a2923cac7eeb47403cac1546a8 projeta618 <projeta618@gmail.com> 1708120270 -0300	commit: chore: add docker attach functionality and docker container id
