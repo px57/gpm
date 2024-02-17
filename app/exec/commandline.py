@@ -1,6 +1,6 @@
 
 from kernel.docker.ps import choice_docker_container
-from kernel.docker.attach import docker_attach
+from kernel.docker.exec import docker_exec_bash
 import pprint
 import os
 import subprocess
@@ -10,7 +10,7 @@ def is_root():
     return os.geteuid() == 0
 
 
-def commandline__attach():
+def commandline__exec():
     """
     This function is to clone.
     """
@@ -22,4 +22,4 @@ def commandline__attach():
     
     # result = subprocess.run(["sudo", "-S"] + commandline, capture_output=True, text=True, input='t9fect9fec\n')
     container = choice_docker_container()
-    docker_attach(container)
+    docker_exec_bash(container)
