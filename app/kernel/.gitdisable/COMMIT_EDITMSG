@@ -1,25 +1,19 @@
-chore: add docker attach functionality and docker container id
+feat: Add docker exec functionality for executing bash commands in a Docker container
 
 Why:
-
-- To add functionality for attaching to a Docker container
-- To add a method for retrieving the Docker container id
+- Introducing a new file "docker/exec.py" to handle executing bash commands in a Docker container.
 
 Changes:
-
-- Added `docker/attach.py` to handle attaching to a container
-- Import `os` and `get_container_id` function from `docker/id.py` in `docker/attach.py`
-- Implemented `docker_attach` function in `docker/attach.py` for attaching to a container
+- Added a new Python file "docker/exec.py" to the project.
+- Implemented a function "docker_exec_bash" to execute bash commands in a Docker container.
+- Imported necessary modules for the functionality.
 
 # Veuillez saisir le message de validation pour vos modifications. Les lignes
 # commençant par '#' seront ignorées, et un message vide abandonne la validation.
 #
 # Sur la branche main
-# Votre branche est en avance sur 'origin/main' de 4 commits.
-#   (utilisez "git push" pour publier vos commits locaux)
+# Votre branche est à jour avec 'origin/main'.
 #
 # Modifications qui seront validées :
-#	nouveau fichier : docker/attach.py
-#	nouveau fichier : docker/id.py
-#	modifié :         docker/ps.py
+#	nouveau fichier : docker/exec.py
 #
