@@ -35,6 +35,9 @@ def commit():
     """
     This function is to commit the changes.
     """
+    # Delete all the .pyc files
+    os.system('find . -name "*.pyc" -exec rm -f {} \;')
+
     print (Fore.RED + ">>> Commit the changes..." + Style.RESET_ALL)
     os.system('git add -A')
     a = os.system('commitgpt --suggestions 7 --max-tokens 100 ""')
@@ -61,6 +64,10 @@ def submodule_integrate():
         
         print (Fore.GREEN + "connect-submodule: " + submodule_path + Style.RESET_ALL)
         # moove the git_path to gitdisable_path
+
+        if os.path.exists(gitdisable_path):
+            # -> remove not empty directory
+            os.system("rm -rf " + gitdisable_path)
         os.rename(git_path, gitdisable_path)
 
 def submodule_unintegrate():

@@ -16,6 +16,7 @@ from commit.commandline import commandline__commit__all
 from editable.commandline import commandline__editable
 from attach.commandline import commandline__attach
 from exec.commandline import commandline__exec
+from makemigrations.commandline import commandline__makemigrations
 
 from commit.commandline import submodule_integrate 
 
@@ -47,6 +48,8 @@ def main():
         return commandline__attach()
     elif sys.argv[1] == "exec":
         return commandline__exec()
+    elif sys.argv[1] == "makemigrations":
+        return commandline__makemigrations()
     elif sys.argv[1] == "django-admin":
         return os.system("django-admin " + " ".join(sys.argv[2:]))
     else:
