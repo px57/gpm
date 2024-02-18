@@ -36,7 +36,7 @@ def commit():
     This function is to commit the changes.
     """
     # Delete all the .pyc files
-    os.system('find . -name "*.pyc" -exec rm -f {} \;')
+    os.system('sudo find . -name "*.pyc" -exec rm -f {} \;')
 
     print (Fore.RED + ">>> Commit the changes..." + Style.RESET_ALL)
     os.system('git add -A')
