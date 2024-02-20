@@ -40,6 +40,8 @@ def commit():
 
     print (Fore.RED + ">>> Commit the changes..." + Style.RESET_ALL)
     os.system('git add -A')
+    # TODO: Not add the migrations file to the commit when is module.
+
     a = os.system('commitgpt --suggestions 7 --max-tokens 100 ""')
     print ('commitgpt >> ' + str(a))
     if a == 256:
