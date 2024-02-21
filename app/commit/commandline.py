@@ -1,8 +1,10 @@
 
+from commit.all.commandline import commandline__all
 from path.find import find_submodule_path
 from config.config import Config
 from colorama import Fore, Style, init
 import os 
+import sys
 
 # Initialiser colorama pour s'assurer qu'il fonctionne bien dans tous les terminaux
 init(autoreset=True)
@@ -11,6 +13,10 @@ def commandline__commit():
     """
     This function is to commit the changes.
     """
+    if len(sys.argv) == 3:
+        if sys.argv[2] == "all":
+            return commandline__all()
+
     config = Config()
     if config.is_project():
         commitcommand___commit__project()
