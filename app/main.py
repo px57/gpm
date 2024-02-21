@@ -12,7 +12,6 @@ from init.commandline import commandline__init
 from status.commandline import commandline__status
 from help.commandline import commandline__help
 from commit.commandline import commandline__commit
-from commit.commandline import commandline__commit__all
 from editable.commandline import commandline__editable
 from attach.commandline import commandline__attach
 from exec.commandline import commandline__exec
@@ -35,10 +34,7 @@ def main():
     elif sys.argv[1] == "status":
         return commandline__status()
     elif sys.argv[1] == "commit":
-        if len(sys.argv) == 2:
-            return commandline__commit()
-        elif sys.argv[2] == "all":
-            return commandline__commit__all()
+        return commandline__commit()
     elif sys.argv[1] == "editable":
         return commandline__editable()
     elif sys.argv[1] == "push":

@@ -92,22 +92,6 @@ def submodule_unintegrate():
         # moove the gitdisable_path to git_path
         os.rename(gitdisable_path, git_path)
 
-def commandline__commit__all():
-    """
-    This function is to commit all submodules.
-    """
-    print ('save the chdir >> ' + os.getcwd())
-    print ('get all submodules')
-    submodules = find_submodule_path()
-    print ('submodules >> ' + str(submodules))
-    # for submodule in submodules:
-    #     print ('submodule >> ' + submodule)
-    #     os.chdir(submodule)
-    #     commit()
-
-    print ('restore the chdir >> ' + os.getcwd())
-    # os.chdir(os.path.join(os.getcwd(), ".."))
-    print ('commit')
 
 
     
