@@ -2,23 +2,7 @@
 import os 
 from colorama import Fore, Style
 from path.find import find_submodule_path
-
-def has_modification(git_path: str):
-    """
-    This function is to check if the project has modification.
-
-    Args:
-    - git_path: the git path.   
-    """
-    pwd = os.getcwd()
-    os.chdir(git_path)
-    a = os.system('git status')
-    os.chdir(pwd)
-    if a == 0:
-        return False
-    else:
-        return True
-
+from kernel.git.status import has_modification
 
 def commandline__all():
     """
@@ -37,5 +21,7 @@ def commandline__all():
         os.chdir(submodule_path)
         os.system('gpm commit')
 
+    if not has_modification(pwd):
+        return
     os.chdir(pwd)
     os.system('gpm commit')

@@ -1,1 +1,13 @@
-oaeu
+feat: add function to check for modifications in a git project
+
+Adding a new Python script `status.py` which contains a function `has_modification` to check if a given git project has modifications. The function takes a git path as input, changes the directory to that path, runs `git status` command, and returns True if there are no modifications.
+
+# Veuillez saisir le message de validation pour vos modifications. Les lignes
+# commençant par '#' seront ignorées, et un message vide abandonne la validation.
+#
+# Sur la branche main
+# Votre branche est à jour avec 'origin/main'.
+#
+# Modifications qui seront validées :
+#	nouveau fichier : git/status.py
+#
