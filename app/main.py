@@ -17,6 +17,7 @@ from attach.commandline import commandline__attach
 from exec.commandline import commandline__exec
 from makemigrations.commandline import commandline__makemigrations
 from dj.commandline import commandline__django
+from push.commandline import commandline__push
 
 from commit.commandline import submodule_integrate 
 
@@ -38,7 +39,7 @@ def main():
     elif sys.argv[1] == "editable":
         return commandline__editable()
     elif sys.argv[1] == "push":
-        return os.system("git push")
+        return commandline__push()
     elif sys.argv[1] == "pull":
         return os.system("git pull")
     elif sys.argv[1] == "attach":
