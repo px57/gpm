@@ -16,7 +16,9 @@ def commandline__commit():
     if len(sys.argv) == 3:
         if sys.argv[2] == "all":
             return commandline__all()
-
+        else: 
+            print (Fore.RED + ">>> Error: " + sys.argv[2] + " is not a valid option." + Style.RESET_ALL)
+            return
     config = Config()
     if config.is_project():
         commitcommand___commit__project()
