@@ -15,3 +15,4 @@ fe5e76222f68f04ed71811c4f8ceef86822b2518 2f7ff9f772fccbb080fb2391259069f135eb45f
 8d4e22df607c28478f5d06f2b11b22a3d7e14c43 3aef868941db1a5078380c3cde2ab149783fb185 px57 <david@prepera.io> 1708527017 -0300	commit: feat: add function to check for modifications in a git project
 3aef868941db1a5078380c3cde2ab149783fb185 aae537bb8905c78db544b6c06abef88cb53f0cd3 px57 <david@prepera.io> 1708742287 -0300	pull: Fast-forward
 aae537bb8905c78db544b6c06abef88cb53f0cd3 8ecf81ef1a7b37c0b535a460f249e042239d70ec px57 <david@prepera.io> 1709042846 -0300	commit: feat: Add colored output to error messages
+8ecf81ef1a7b37c0b535a460f249e042239d70ec ce78000968ae6a73936a2b840291ac84a81a1dda px57 <david@prepera.io> 1709144314 -0300	commit: feat: Add interactive selection of Docker containers
