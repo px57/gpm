@@ -37,19 +37,48 @@ def commitcommand___commit__module():
     """
     This function is to commit the changes of the submodule.
     """
-    commit()
+    commit(
+        delete_all_migration = True
+    )
 
-def commit():
+def git_A():
+    """
+    This function is to add all the files.
+    """
+    print (Fore.RED + ">>> Add all the files..." + Style.RESET_ALL)
+    os.system('git add -A')
+
+
+def remove_in_git_all_migrations_file(delete_all_migration = False):
+    """
+    Remove migrations file in the git.
+    """
+    if not delete_all_migration:
+        return
+    
+    # git rm --cached -r migrations
+    print (Fore.RED + ">>> Remove all the migrations files..." + Style.RESET_ALL)
+    if os.path.exists('migrations'):
+        list_of_migrations = os.listdir('migrations')
+        for migration in list_of_migrations:
+            if migration == "__init__.py":
+                continue
+            cmd = 'git rm --cached -r migrations/' + migration
+            print (cmd)
+            os.system('git rm --cached -r migrations/' + migration) 
+ 
+
+def commit(delete_all_migration = False):
     """
     This function is to commit the changes.
     """
     # Delete all the .pyc files
     os.system('sudo find . -name "*.pyc" -exec rm -f {} \;')
 
-    print (Fore.RED + ">>> Commit the changes..." + Style.RESET_ALL)
-    os.system('git add -A')
-    # TODO: Not add the migrations file to the commit when is module.
+    git_A()
+    remove_in_git_all_migrations_file(delete_all_migration=delete_all_migration)
 
+    print (Fore.RED + ">>> Commit the changes..." + Style.RESET_ALL)
     a = os.system('commitgpt --suggestions 7 --max-tokens 100 ""')
     print ('commitgpt >> ' + str(a))
     if a == 256:

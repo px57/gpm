@@ -2,8 +2,9 @@
 import os
 import docker
 import json
-
-
+import inquirer 
+ 
+                                                  
 def docker_ps():
     """
         @description: 
@@ -36,10 +37,21 @@ def choice_docker_container():
     containers = docker_ps()
 
     # Affichage des conteneurs
+    list_containers = []
     for i, container in enumerate(containers):
-        print(f"{i+1}. {container['Name']}")
+        list_containers.append(container['Name'])
 
-    # Choix du conteneur
-    choice = int(input("Choisissez un conteneur: ")) - 1
-    return containers[choice]
+    questions = [ 
+        inquirer.List(
+            'container', 
+            message="Quel container souhaitez-vous utiliser ?", 
+            choices=list_containers, 
+            ), 
+    ]    
+ 
+    answers = inquirer.prompt(questions) 
 
+    for container in containers:
+        if container['Name'] == answers['container']:
+            return container
+    raise Exception("Container not found")

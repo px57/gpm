@@ -1,11 +1,23 @@
 
+
 from kernel.interfaces.env import DEFAULT_INTERFACE_NAME
+import importlib
+import os
 
 
 class InterfaceManager(object): 
     """
         @description: This class manages the interfaces, with multiple functions. 
     """
+
+    DEBUG = False
+
+    @property
+    def __classpath__(self):
+        """
+            @description: The interface path.
+        """
+        return self.__class__.__module__ + '.' + self.__class__.__name__
 
     # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [LOG] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     def _interface__initlog(self):
@@ -59,3 +71,43 @@ class InterfaceManager(object):
         return DEFAULT_INTERFACE_NAME
 
     # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [END] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [GPM] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    def gpm_pre_init(self):
+        """
+            @description: The gpmInit method.
+        """
+        self._interface__log(function_name='gpm_pre_init')
+
+    def gpm_init(self, *args, **kwargs):
+        """
+            @description: The gpmInit method.
+        """
+        self._interface__log(function_name='gpm_init')
+
+    def gpm_post_init(self):
+        """
+            @description: The gpmInit method.
+        """
+        self._interface__log(function_name='gpm_post_init')
+
+    def gpm_run(self):
+        """
+        The gpmRun method.
+        """
+        pass
+
+
+def __init__interface__(app: str, ) -> None:
+    """
+    In the app has, __interface__ folder import all modules, dynamically.   
+    """
+    module = app + '.__interface__'
+    importlib.import_module(module)
+    listdir = os.listdir(module.replace('.', '/'))
+    for remove in ['__init__.py', '__pycache__']:
+        if remove in listdir:
+            listdir.remove(remove)
+            
+    for file in listdir:
+        if file.endswith('.py'):
+            importlib.import_module(module + '.' + file.replace('.py', ''))

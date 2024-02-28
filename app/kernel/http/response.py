@@ -105,14 +105,33 @@ class Response(object):
         """
             @description: Get request in response.
         """
+        self.raise_error_if_no_request()
         return self.__core__.request
     
+    def raise_error_if_no_request(self):    
+        """
+            @description: Raise error if no request.
+        """
+        if not self.has_request():
+            raise Exception("The request is not defined in the response.")
+        
     def has_request(self):
         """
             @description: Has request in response.
         """
         return self.__core__.request is not None
 
+    def is_authenticated(self):
+        """
+        The user is authenticated.
+        """
+        return self.get_request().user.is_authenticated
+    
+    def is_not_authenticated(self):
+        """
+        The user is not authenticated.
+        """
+        return not self.is_authenticated()
     # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [END] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [INTERFACE] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     def get_interface(self):
@@ -404,3 +423,16 @@ def get_fake_response(profile=None):
     """
     fake_request = generate_fake_request(profile=profile)
     return Response(request=fake_request)
+
+def load_response(function, *args, **kwargs):
+    """
+    Charge le profile à l'intérieurs des éléments.
+    """
+    def wrap(request, *args, **kwargs):
+        res = Response(request=request)
+        # TODO: Ajouter un systeme pour pouvoir charger l'interface, qui va servir a parametre l'execution de la view.
+        return function(res, request, *args, **kwargs)
+    
+    wrap.__doc__ = function.__doc__
+    wrap.__name__ = function.__name__
+    return wrap

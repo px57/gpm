@@ -7,6 +7,7 @@ import os
 import sys
 
 sys.path.append(os.path.join(os.path.dirname(__file__), ""))
+sys.path.append(os.path.join(os.path.dirname(__file__), "kernel"))
 
 from init.commandline import commandline__init
 from status.commandline import commandline__status
@@ -18,6 +19,7 @@ from exec.commandline import commandline__exec
 from makemigrations.commandline import commandline__makemigrations
 from dj.commandline import commandline__django
 from push.commandline import commandline__push
+from dock.commandline import commandline__docker
 
 from commit.commandline import submodule_integrate 
 
@@ -50,6 +52,8 @@ def main():
         return commandline__makemigrations()
     elif sys.argv[1] == "dj":
         return commandline__django()
+    elif sys.argv[1] == "docker":
+        return commandline__docker()
     else:
         return commandline__help()
 
