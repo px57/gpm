@@ -27,9 +27,20 @@ def create_command_file():
     """
     This function is used to create the command file.
     """
-    os.system(
-        'echo "gpm" > /usr/local/bin/gpm'
-    )
+    file = """
+#!/usr/bin/env python3
+
+
+import os
+import sys
+
+argv = sys.argv[1:]
+command = 'python3 /var/projects/gpm/main.py ' + ' '.join(argv)
+os.system(command)
+"""
+    with open('/usr/local/bin/gpm', 'w') as f:
+        f.write(file)
+
     os.system(
         'chmod +x /usr/local/bin/gpm'
     )
