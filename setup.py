@@ -35,7 +35,7 @@ import os
 import sys
 
 argv = sys.argv[1:]
-command = 'python3 /var/projects/gpm/main.py ' + ' '.join(argv)
+command = 'python3 /var/projects/gpm/app/main.py ' + ' '.join(argv)
 os.system(command)
 """
     with open('/usr/local/bin/gpm', 'w') as f:
