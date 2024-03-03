@@ -16,3 +16,4 @@ fe5e76222f68f04ed71811c4f8ceef86822b2518 2f7ff9f772fccbb080fb2391259069f135eb45f
 3aef868941db1a5078380c3cde2ab149783fb185 aae537bb8905c78db544b6c06abef88cb53f0cd3 px57 <david@prepera.io> 1708742287 -0300	pull: Fast-forward
 aae537bb8905c78db544b6c06abef88cb53f0cd3 8ecf81ef1a7b37c0b535a460f249e042239d70ec px57 <david@prepera.io> 1709042846 -0300	commit: feat: Add colored output to error messages
 8ecf81ef1a7b37c0b535a460f249e042239d70ec ce78000968ae6a73936a2b840291ac84a81a1dda px57 <david@prepera.io> 1709144314 -0300	commit: feat: Add interactive selection of Docker containers
+ce78000968ae6a73936a2b840291ac84a81a1dda a4d8285755b4dc144c695a23d775c06c4083fe4e px57 <david@prepera.io> 1709427958 -0300	commit: Refactor: Update has_modification function to use subprocess for checking git status

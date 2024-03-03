@@ -1,1 +1,20 @@
-y
+Refactor: Update has_modification function to use subprocess for checking git status
+
+Why: The existing implementation used os and os.system which is not recommended for executing external commands. Refactoring to use subprocess is a better and more secure approach.
+
+Changes:
+- Removed usage of os and os.system
+- Added import statement for subprocess
+- Implemented subprocess to run 'git status --porcelain' command for checking modifications
+- Improved handling of the command output and returning either True or False based on the result
+
+# Veuillez saisir le message de validation pour vos modifications. Les lignes
+# commençant par '#' seront ignorées, et un message vide abandonne la validation.
+#
+# Sur la branche main
+# Votre branche est en avance sur 'origin/main' de 2 commits.
+#   (utilisez "git push" pour publier vos commits locaux)
+#
+# Modifications qui seront validées :
+#	modifié :         git/status.py
+#
