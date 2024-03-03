@@ -1,18 +1,18 @@
-Refactor: Update has_modification function to use subprocess for checking git status
+chore: optimize check for modifications in git repository
 
-Why: The existing implementation used os and os.system which is not recommended for executing external commands. Refactoring to use subprocess is a better and more secure approach.
+Why:
+- The existing code for checking modifications in the git repository needed optimization.
 
 Changes:
-- Removed usage of os and os.system
-- Added import statement for subprocess
-- Implemented subprocess to run 'git status --porcelain' command for checking modifications
-- Improved handling of the command output and returning either True or False based on the result
+- Updated the function to exclude certain directories ('.gitdisable/' and 'migrations/') from the check for modifications.
+- Printed a clearer output of the modifications found in the repository.
+- Added a check to return True if there are more than one modified files.
 
 # Veuillez saisir le message de validation pour vos modifications. Les lignes
 # commençant par '#' seront ignorées, et un message vide abandonne la validation.
 #
 # Sur la branche main
-# Votre branche est en avance sur 'origin/main' de 2 commits.
+# Votre branche est en avance sur 'origin/main' de 3 commits.
 #   (utilisez "git push" pour publier vos commits locaux)
 #
 # Modifications qui seront validées :
