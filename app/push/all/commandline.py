@@ -35,5 +35,5 @@ def commandline__all():
 
     if not has_modification(pwd):
         return
-    # os.chdir(pwd)
-    # os.system('gpm push')
+    os.chdir(pwd)
+    os.system('gpm push')
