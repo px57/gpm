@@ -20,6 +20,8 @@ from makemigrations.commandline import commandline__makemigrations
 from dj.commandline import commandline__django
 from push.commandline import commandline__push
 from dock.commandline import commandline__docker
+from modules.commandline import commandline__modules
+
 
 from commit.commandline import submodule_integrate 
 
@@ -54,6 +56,8 @@ def main():
         return commandline__django()
     elif sys.argv[1] == "docker":
         return commandline__docker()
+    elif sys.argv[1] == "modules":
+        return commandline__modules()
     else:
         return commandline__help()
 
