@@ -82,7 +82,7 @@ def save_chatgpt_api_key():
     # touch ~/.config/commitgpt/config.toml
 
     os.system(
-        f'echo api_key = "{key}" > ~/.config/commitgpt/config.toml'
+        f'echo api_key = \"{key}\" > ~/.config/commitgpt/config.toml'
     )
     # echo 'api_key = "YOUR_OPENAI_API_KEY"' > ~/.config/commitgpt/config.toml
 
@@ -99,7 +99,7 @@ def setup_requirements():
     os.system(
         'sudo apt  install cargo '
     )
-    
+
     # Python requirements
     os.system(
         'pip3 install -r requirements.text'
