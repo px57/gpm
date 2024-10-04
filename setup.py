@@ -20,7 +20,15 @@ def moove_directories():
     This function is used to move the directories and subdirectories to /var/projects/gpm/ directory.
     """
     os.system(
-        'cp -rf ./* /var/projects/gpm/'
+        'sudo mkdir -p /var/projects',
+    )
+
+    os.system(
+        'sudo mkdir -p /var/projects/gpm',
+    )
+    
+    os.system(
+        'sudo cp -rf ./* /var/projects/gpm/'
     )
 
 def create_command_file():
@@ -99,4 +107,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-    
