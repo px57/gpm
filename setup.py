@@ -10,10 +10,14 @@ def create_directories():
     """
     This function is used to create the directories and subdirectories.
     """
-    os.makedirs(
-        '/var/projects/gpm/app/kernel/docker', 
-        exist_ok=True
+    # os.makedirs(
+    #     '/var/projects/gpm/app/kernel/docker', 
+    #     exist_ok=True
+    # )
+    os.system(
+        'sudo mkdir -p /var/projects/gpm/app/kernel/docker'
     )
+
 
 def moove_directories():
     """
