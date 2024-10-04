@@ -90,6 +90,16 @@ def setup_requirements():
     """ 
     This function is used to install the requirements.
     """
+    # Install rust.
+    os.system(
+        "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
+    )
+
+    # Install cargo.
+    os.system(
+        'sudo apt  install cargo '
+    )
+    
     # Python requirements
     os.system(
         'pip3 install -r requirements.text'
