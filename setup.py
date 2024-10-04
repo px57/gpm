@@ -26,9 +26,14 @@ def moove_directories():
     os.system(
         'sudo mkdir -p /var/projects/gpm',
     )
-    
+
     os.system(
         'sudo cp -rf ./* /var/projects/gpm/'
+    )
+
+    # chmod -R 777 /var/projects/gpm
+    os.system(
+        'sudo chmod -R 777 /var/projects/gpm'
     )
 
 def create_command_file():
