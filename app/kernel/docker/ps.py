@@ -1,26 +1,32 @@
 
+from pprint import pprint
+
 import os
 import docker
 import json
 import inquirer 
+import subprocess
+import json
+
+
+# Run the docker ps command with JSON output
+
  
                                                   
 def docker_ps():
     """
         @description: 
     """
-    # Connexion au client Docker
-    client = docker.from_env()
+    result = subprocess.run(
+        ['docker', 'ps', '--format', '{{json .}}'],
+        stdout=subprocess.PIPE,
+        text=True
+    )
 
-    # Récupération des conteneurs en cours d'exécution
-    containers = client.containers.list()
+    # Split output into lines and parse each line as JSON
+    containers = [json.loads(line) for line in result.stdout.splitlines()]
 
-    # Conversion des conteneurs en format JSON
-    json_data = []
-    for container in containers:
-        json_data.append(container.attrs)
-
-    return json_data
+    return containers
 
 def docker_ps_json():
     """
@@ -39,7 +45,7 @@ def choice_docker_container():
     # Affichage des conteneurs
     list_containers = []
     for i, container in enumerate(containers):
-        list_containers.append(container['Name'])
+        list_containers.append(container['Names'])
 
     questions = [ 
         inquirer.List(
@@ -52,6 +58,6 @@ def choice_docker_container():
     answers = inquirer.prompt(questions) 
 
     for container in containers:
-        if container['Name'] == answers['container']:
+        if container['Names'] == answers['container']:
             return container
     raise Exception("Container not found")

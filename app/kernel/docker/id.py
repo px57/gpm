@@ -3,4 +3,4 @@ def get_container_id(container):
     """
         @description: 
     """
-    return container["Id"]
+    return container.get("Id", container.get("ID", None))
