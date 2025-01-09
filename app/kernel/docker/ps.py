@@ -32,8 +32,8 @@ def docker_ps_json():
     """
         @description: 
     """
-    docker_ps = docker_ps()
-    return json.dumps(docker_ps, indent=4)
+    containers = docker_ps()
+    return json.dumps(containers, indent=4)
 
 def choice_docker_container():
     """

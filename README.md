@@ -13,7 +13,7 @@ Les principes fondamentaux de gpm sont:
 
 1. Tout ce que vous codez, ne le codez plus jamais, contenter vous de configurer votre anciens travail 
    dans de nouvelle circonstance clients. 
-2. L'IA est une mauvais programmatrice, par contre elle peut facilement assimiler des concepts de configuration. 
+2. L'IA est une mauvais programmatrice, par contre elle peut facilement assimiler des concepts de configuation. 
    Nous visons au sein de GPM a mettre en place un systeme qui vous permettra de creer une documentation, 
    Gerer par l'IA pour ainsi que celle-ci puisse facilement pour vous ou vos equipe macher le travail 
    que vous aurez produit ou que le reste de la communaute aura coder grace a l'architecture de programmation 
@@ -23,3 +23,7 @@ Les principes fondamentaux de gpm sont:
 <!--
     
 -->
+*** Setup ***
+git clone https://github.com/px57/gpm.git
+cd ./gpm/
+python3 ./setup.py

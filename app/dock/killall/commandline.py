@@ -33,7 +33,7 @@ def commandline__killall():
     docker_list = docker_ps()
     # get list uid
     list_uid = [get_container_id(container) for container in docker_list]
-    print (list_uid)
+
     for uid in list_uid:
         print (Fore.RED + f">>> Kill the container {uid}..." + Style.RESET_ALL)
         os.system(f"docker stop {uid}")

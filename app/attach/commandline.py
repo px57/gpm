@@ -1,4 +1,5 @@
 
+from kernel.docker.ps import docker_ps_json
 from kernel.docker.ps import choice_docker_container
 from kernel.docker.attach import docker_attach
 import pprint
@@ -19,6 +20,11 @@ def commandline__attach():
         # Relancer le script avec sudo
         os.execvp('sudo', args)
         return 
+    
+    print (sys.argv)
+    if '--json' in sys.argv:
+        print(docker_ps_json())
+        return
     
     # result = subprocess.run(["sudo", "-S"] + commandline, capture_output=True, text=True, input='t9fect9fec\n')
     container = choice_docker_container()
