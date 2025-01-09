@@ -1,7 +1,10 @@
 
+# Kernel import
 from kernel.docker.ps import docker_ps_json
 from kernel.docker.ps import choice_docker_container
 from kernel.docker.attach import docker_attach
+
+# Python import
 import pprint
 import os
 import subprocess

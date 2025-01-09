@@ -21,7 +21,7 @@ from dj.commandline import commandline__django
 from push.commandline import commandline__push
 from dock.commandline import commandline__docker
 from modules.commandline import commandline__modules
-
+from db.commandline import commandline__db
 
 from commit.commandline import submodule_integrate 
 
@@ -36,6 +36,8 @@ def main():
         return commandline__init()
     elif sys.argv[1] == "help":
         return commandline__help()
+    elif sys.argv[1] == "db":
+        return commandline__db()
     elif sys.argv[1] == "status":
         return commandline__status()
     elif sys.argv[1] == "commit":
